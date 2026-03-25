@@ -61,8 +61,8 @@ compression_retriever = ContextualCompressionRetriever(
 #Query the retriever
 query = "what is photosynthesis"
 
-compressed_results = compression_retriever.input_schema(query)
+compressed_results = compression_retriever.invoke(query)
 
-for i, doc in enumerate:
+for i, doc in enumerate(compressed_results):
     print(f"\n --- Result {i+1} ---")
     print(doc.page_content)
